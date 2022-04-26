@@ -20,17 +20,32 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
-  <title>My first PWA</title>
+  <title>Boolean expression</title>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
     <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class = "mdl-layout__header">
         <div class = "mdl-layout__header-row">      
-          <span class = "mdl-layout-title">XXX</span>
+          <span class = "mdl-layout-title">Positive or Negative with JS</span>
         </div>       
       </header>
       <main class = "mdl-layout__content">
+        <img src="./images/boo.svg" alt="sphere" width="20%" height="auto" />
+        <!-- basic text -->
+        <p>Use the slider to choose a positive or negative number<br>Press the button and we will tell you whether its positive or negative</p> 
+        <!-- Default Slider -->
+        <label>
+          Slide to choose your number
+          <input id = "slider" class="mdl-slider mdl-js-slider" type="range"
+          min="-100" max="100" value="1" tabindex="0">
+        </label>
+        <br>
+        <!-- Colored raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="check()">
+          Calculate
+        </button>
+        <div id="boolean"></div>
       </main>
     </div>
   </body>

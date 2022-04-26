@@ -5,7 +5,7 @@
 // This file contains the JS functions for index.html
 
 /**
- * Check servie worker.
+ * Check service worker.
  */
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS20-Unit5-02-JS/sw.js", {
@@ -13,9 +13,19 @@ if (navigator.serviceWorker) {
   })
 }
 
+"use strict"
+
 /**
- * This function displays an alert.
+ * This function calculates random number and checks if you guessed it correctly
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function check() {
+  // input
+  var number = parseInt(document.getElementById("slider").value)
+
+  // process and output
+  if (number >= 0) {
+    document.getElementById("boolean").innerHTML = "This number is positive"
+  } else {
+    document.getElementById("boolean").innerHTML = "This number is negative"
+  }
 }
