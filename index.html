@@ -34,13 +34,14 @@
         <img src="./images/boo.svg" alt="sphere" width="20%" height="auto" />
         <!-- basic text -->
         <p>Use the slider to choose a positive or negative number<br>Press the button and we will tell you whether its positive or negative</p> 
-        <!-- Default Slider -->
-        <label>
-          Slide to choose your number
-          <input id = "slider" class="mdl-slider mdl-js-slider" type="range"
-          min="-100" max="100" value="1" tabindex="0">
-        </label>
-        <br>
+       <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="slider">
+            <label class="mdl-textfield__label" for="slider">Input integer</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
         <!-- Colored raised button -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="check()">
           Calculate
